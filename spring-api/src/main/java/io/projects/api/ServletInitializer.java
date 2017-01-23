@@ -6,22 +6,16 @@ public class ServletInitializer extends AbstractAnnotationConfigDispatcherServle
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
-		return new Class[] {APIconfig.class};
+		return new Class[] { APIconfig.class, JPAConfig.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		// TODO Auto-generated method stub
-		return new String[] { "/api/.*"};
+		return new String[] { "/api/*" };
 	}
-
-	
-
 }
